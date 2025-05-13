@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - Dreamotion Play</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f5f5f5; }
+    header { background: #222; color: white; padding: 20px; text-align: center; }
+    nav a { color: white; margin: 0 15px; text-decoration: none; }
+    .section { padding: 40px 20px; max-width: 600px; margin: auto; background: white; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); margin-top: 40px; }
+    h2 { text-align: center; }
+    form { display: flex; flex-direction: column; gap: 15px; }
+    input, textarea { padding: 10px; font-size: 16px; border-radius: 5px; border: 1px solid #ccc; }
+    button { padding: 12px; background: #007BFF; color: white; border: none; border-radius: 5px; font-size: 16px; cursor: pointer; }
+    button:hover { background: #0056b3; }
+    footer { background: #222; color: white; text-align: center; padding: 20px; margin-top: 40px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Dreamotion Play</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="products.html">Products</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <div class="section">
+    <h2>Contact Us</h2>
+    <p style="text-align: center;">Let us know what kind of indoor playground you need. We'll get back to you within 24 hours.</p>
+    <form action="https://formspree.io/f/xqkrbnnq" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <input type="text" name="subject" placeholder="Subject">
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+
+  <footer>
+    <p>&copy; 2024 Dreamotion Play. All rights reserved.</p>
+  </footer>
+</body>
+</html>
