@@ -1,95 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Us - Dreamotion Play</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Us - Dreamotion</title>
   <style>
     body {
       margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #fefefe;
+      font-family: 'Arial', sans-serif;
       color: #333;
+      line-height: 1.6;
     }
     header {
-      background-color: #1e1e1e;
-      color: white;
-      padding: 20px;
-      text-align: center;
+      background-color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
     }
     nav a {
-      color: white;
-      margin: 0 15px;
+      margin-left: 30px;
       text-decoration: none;
+      color: #333;
       font-weight: bold;
     }
-    nav a:hover {
-      text-decoration: underline;
+    .section {
+      padding: 60px 40px;
+      max-width: 960px;
+      margin: auto;
     }
-    .about-section {
-      max-width: 900px;
-      margin: 60px auto;
-      background: white;
-      padding: 40px;
-      border-radius: 10px;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.1);
-    }
-    .about-section h2 {
+    .section h1 {
+      font-size: 36px;
+      margin-bottom: 20px;
       text-align: center;
-      font-size: 28px;
-      margin-bottom: 30px;
-      color: #222;
     }
-    .about-section p {
-      font-size: 16px;
-      line-height: 1.7;
+    .section p {
       margin-bottom: 20px;
     }
-    footer {
-      background-color: #1e1e1e;
-      color: white;
+    .image-row {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-top: 40px;
+    }
+    .image-row img {
+      width: 300px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .cta {
       text-align: center;
-      padding: 20px;
-      margin-top: 60px;
+      margin-top: 40px;
+    }
+    .cta a {
+      background-color: #0077cc;
+      color: white;
+      padding: 12px 24px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Dreamotion Play</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="products.html">Products</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </header>
 
-  <section class="about-section">
-    <h2>About Us</h2>
-    <p>
-      Dreamotion Play is a Guangzhou-based indoor playground manufacturer with over 8 years of experience in
-      designing and producing custom play solutions for commercial spaces. From shopping malls to family centers
-      and kindergartens, our solutions are known for creativity, durability, and fun.
-    </p>
-    <p>
-      Our factory covers over 3,000 square meters and includes specialized areas for soft play, steel structures,
-      testing zones, and slide installations. Every project we create meets international safety standards and adapts
-      to local cultural preferences.
-    </p>
-    <p>
-      We proudly serve clients across Vietnam, Singapore, Malaysia, Africa, and more — delivering dream playgrounds
-      to over 30 countries.
-    </p>
-    <p>
-      Our mission is to make every childhood moment magical. Whether you're an entrepreneur, school, or developer,
-      Dreamotion Play is here to support your vision.
-    </p>
-  </section>
+<header>
+  <div style="font-size: 24px; font-weight: bold;">Dreamotion</div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="products.html">Products</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
 
-  <footer>
-    <p>&copy; 2024 Dreamotion Play. All rights reserved.</p>
-  </footer>
+<section class="section">
+  <h1>About Dreamotion</h1>
+  <p>
+    Dreamotion 是一家位于中国广州的淘气堡生产制造企业，拥有超过 8 年的行业经验。我们不仅提供专业的定制设计服务，还通过自有工厂进行高质量的生产，确保每一个细节都符合国际标准。
+  </p>
+  <p>
+    我们的产品已广泛出口到越南、新加坡、马来西亚、非洲等多个国家，深受商场、酒店、月子中心、幼儿园、亲子乐园等客户群体的认可与喜爱。
+  </p>
+  <p>
+    Dreamotion 不只是一个工厂，更是一套完整的创业解决方案服务商。我们支持从选址分析、平面规划、设备配套，到后期运营建议，帮助客户高效落地他们的儿童乐园项目。
+  </p>
+
+  <div class="image-row">
+    <img src="https://your-factory-image1.jpg" alt="Factory Area">
+    <img src="https://your-factory-image2.jpg" alt="Production Line">
+    <img src="https://your-factory-image3.jpg" alt="Installed Project">
+  </div>
+
+  <div class="cta">
+    <a href="products.html">了解我们的产品</a>
+  </div>
+</section>
+
 </body>
 </html>
 
