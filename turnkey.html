@@ -7,7 +7,7 @@
   <style>
     body {
       margin: 0;
-      font-family: 'Arial', sans-serif;
+      font-family: Arial, sans-serif;
       color: #333;
     }
     header {
@@ -25,9 +25,9 @@
       font-weight: bold;
     }
     .section {
-      padding: 60px 20px;
       max-width: 1000px;
       margin: auto;
+      padding: 60px 20px;
     }
     h1 {
       text-align: center;
@@ -40,16 +40,21 @@
       color: #666;
       margin-bottom: 40px;
     }
-    .placeholder {
+    .product-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+    }
+    .product-gallery img {
       width: 100%;
-      height: 300px;
-      background-color: #eee;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #aaa;
-      font-size: 18px;
+      height: 220px;
+      object-fit: cover;
       border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+    .product-gallery img:hover {
+      transform: scale(1.05);
     }
   </style>
 </head>
@@ -66,16 +71,17 @@
 </header>
 
 <section class="section">
-  <h1>Turnkey Indoor Playground Solutions</h1>
+  <h1>Turnkey Indoor Playgrounds</h1>
   <p>
-    Explore our full-package playground design services. We offer planning, customized layouts, and complete production based on your space and market needs.
+    From concept to completion, we deliver full-service indoor playground solutions tailored to your space, theme, and audience.
   </p>
 
-  <div class="placeholder">
-    [ Project Images Coming Soon ]
+  <div class="product-gallery">
+    <img src="assets/turnkey-01.jpg" alt="Turnkey Example 1">
+    <img src="assets/turnkey-02.jpg" alt="Turnkey Example 2">
+    <img src="assets/turnkey-03.jpg" alt="Turnkey Example 3">
   </div>
 </section>
 
 </body>
 </html>
-add turnkey playground page
