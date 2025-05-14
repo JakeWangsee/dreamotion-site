@@ -11,20 +11,56 @@
       color: #333;
       line-height: 1.7;
     }
-    header {
-      background-color: #fff;
+    .site-header {
       display: flex;
       justify-content: space-between;
       align-items: center;
+      background: #fff;
       padding: 20px 40px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+      flex-wrap: wrap;
     }
-    nav a {
-      margin-left: 30px;
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+    .logo img {
+      height: 40px;
+      margin-right: 10px;
+    }
+    .logo span {
+      font-size: 1.5em;
+      font-weight: bold;
+      color: #0088cc;
+    }
+    .main-nav a {
+      margin: 0 15px;
       text-decoration: none;
       color: #333;
       font-weight: bold;
+      font-size: 1em;
     }
+    .main-nav a:hover {
+      color: #0088cc;
+    }
+    .contact-info {
+      font-size: 0.95em;
+      color: #008800;
+      font-weight: bold;
+    }
+    @media (max-width: 768px) {
+      .site-header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .main-nav {
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+
     .section {
       padding: 60px 40px;
       max-width: 960px;
@@ -75,14 +111,20 @@
 </head>
 <body>
 
-<header>
-  <div style="font-size: 24px; font-weight: bold;">Dreamotion</div>
-  <nav>
+<header class="site-header">
+  <div class="logo">
+    <img src="assets/logo.png" alt="Dreamotion Logo">
+    <span>Dreamotion</span>
+  </div>
+  <nav class="main-nav">
     <a href="index.html">Home</a>
-    <a href="about.html">About</a>
     <a href="products.html">Products</a>
+    <a href="about.html">About</a>
     <a href="contact.html">Contact</a>
   </nav>
+  <div class="contact-info">
+    WhatsApp: +86 123 4567 8901
+  </div>
 </header>
 
 <section class="section">
@@ -131,28 +173,30 @@
 <div class="cta">
   <a href="products.html">Explore Our Products</a>
 </div>
-  <footer style="background-color: #222; color: #fff; padding: 40px 20px; text-align: center; margin-top: 60px;">
-    <div style="max-width: 1000px; margin: auto;">
-      <p style="font-size: 1em; margin-bottom: 10px;"><strong>Dreamotion Playground Factory</strong></p>
-      <p style="font-size: 0.9em; margin: 5px 0;">WhatsApp: +86-123-4567-8901</p>
-      <p style="font-size: 0.9em; margin: 5px 0;">Email: contact@dreamotionplay.com</p>
-      
-      <div style="margin: 20px 0;">
-        <a href="index.html" style="color:#ccc; margin: 0 10px;">Home</a>
-        <a href="products.html" style="color:#ccc; margin: 0 10px;">Products</a>
-        <a href="about.html" style="color:#ccc; margin: 0 10px;">About</a>
-        <a href="contact.html" style="color:#ccc; margin: 0 10px;">Contact</a>
-      </div>
 
-      <div style="margin: 15px 0;">
-        <span style="color:#888; font-size: 0.85em;">Language:</span>
-        <strong style="margin-left: 10px; color: #fff;">English</strong> | 
-        <a href="#" style="color: #ccc; text-decoration: none; margin-left: 10px;">中文（即将上线）</a>
-      </div>
-
-      <p style="margin-top: 20px; font-size: 0.8em; color: #777;">© 2025 Dreamotion Playground Factory. All rights reserved.</p>
+<footer style="background-color: #222; color: #fff; padding: 40px 20px; text-align: center; margin-top: 60px;">
+  <div style="max-width: 1000px; margin: auto;">
+    <p style="font-size: 1em; margin-bottom: 10px;"><strong>Dreamotion Playground Factory</strong></p>
+    <p style="font-size: 0.9em; margin: 5px 0;">WhatsApp: +86-123-4567-8901</p>
+    <p style="font-size: 0.9em; margin: 5px 0;">Email: contact@dreamotionplay.com</p>
+    
+    <div style="margin: 20px 0;">
+      <a href="index.html" style="color:#ccc; margin: 0 10px;">Home</a>
+      <a href="products.html" style="color:#ccc; margin: 0 10px;">Products</a>
+      <a href="about.html" style="color:#ccc; margin: 0 10px;">About</a>
+      <a href="contact.html" style="color:#ccc; margin: 0 10px;">Contact</a>
     </div>
-  </footer>
+
+    <div style="margin: 15px 0;">
+      <span style="color:#888; font-size: 0.85em;">Language:</span>
+      <strong style="margin-left: 10px; color: #fff;">English</strong> | 
+      <a href="#" style="color: #ccc; text-decoration: none; margin-left: 10px;">中文（即将上线）</a>
+    </div>
+
+    <p style="margin-top: 20px; font-size: 0.8em; color: #777;">© 2025 Dreamotion Playground Factory. All rights reserved.</p>
+  </div>
+</footer>
 
 </body>
 </html>
+
