@@ -8,137 +8,137 @@
     body {
       margin: 0;
       font-family: 'Arial', sans-serif;
+      background-color: #f7f7f7;
       color: #333;
     }
-    .header {
+
+    header {
       background-color: #fff;
       display: flex;
       justify-content: space-between;
       align-items: center;
       padding: 20px 40px;
       box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-      position: sticky;
-      top: 0;
-      z-index: 999;
     }
-    .header img {
-      height: 40px;
-    }
+
     nav a {
       margin-left: 30px;
       text-decoration: none;
       color: #333;
       font-weight: bold;
     }
+
     .hero {
-      height: 80vh;
-      background: url('https://your-image-link.jpg') center center/cover no-repeat;
-      display: flex;
-      align-items: center;
-      justify-content: left;
-      padding-left: 60px;
-      color: white;
-      background-color: #00000050;
-    }
-    .hero h1 {
-      font-size: 48px;
-    }
-    .hero p {
-      font-size: 22px;
-      margin-top: 10px;
-    }
-    .section {
-      padding: 60px 40px;
-      background: #f9f9f9;
-    }
-    .section h2 {
+      padding: 60px 20px;
+      background: linear-gradient(to right, #e0f7fa, #ffffff);
       text-align: center;
-      font-size: 32px;
+    }
+
+    .hero h1 {
+      font-size: 2.4em;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 1.1em;
+      max-width: 800px;
+      margin: auto;
+      line-height: 1.6;
+    }
+
+    .featured {
+      padding: 60px 20px;
+      background-color: #fff;
+    }
+
+    .featured h2 {
+      text-align: center;
       margin-bottom: 40px;
     }
-    .cards {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 40px;
-      justify-content: center;
+
+    .product-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      max-width: 1000px;
+      margin: auto;
     }
+
     .card {
-      width: 300px;
-      background: white;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      overflow: hidden;
-    }
-    .card img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-    }
-    .card h3 {
-      margin: 15px;
-    }
-    .card p {
-      margin: 0 15px 20px;
-      color: #555;
-    }
-    .cta {
+      background: #fdfdfd;
+      border-radius: 12px;
+      padding: 30px 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
       text-align: center;
-      margin-top: 40px;
     }
-    .cta a {
-      background-color: #0077cc;
+
+    .card h3 {
+      margin-bottom: 10px;
+      color: #0088cc;
+    }
+
+    .card p {
+      font-size: 0.95em;
+      color: #666;
+    }
+
+    .card a {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 8px 16px;
+      background-color: #0088cc;
       color: white;
-      padding: 12px 24px;
-      border-radius: 5px;
       text-decoration: none;
-      font-weight: bold;
+      border-radius: 6px;
+      font-size: 0.9em;
+    }
+
+    .card a:hover {
+      background-color: #006699;
     }
   </style>
 </head>
 <body>
 
-<header class="header">
-  <a href="index.html">
-    <img src="assets/logo.png" alt="Dreamotion Logo">
-  </a>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="products.html">Products</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-</header>
+  <header>
+    <h2>Dreamotion</h2>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
 
-<section class="hero">
-  <div>
-    <h1>Welcome to Dreamotion</h1>
-    <p>Custom Indoor Playgrounds for Global Entrepreneurs</p>
-  </div>
-</section>
+  <section class="hero">
+    <h1>We Build Imagination</h1>
+    <p>
+      Dreamotion is a leading indoor playground manufacturer based in Guangzhou, China. 
+      With over 8 years of experience, we specialize in designing and building custom play solutions 
+      for shopping malls, preschools, family entertainment centers, and hotels worldwide. 
+      We’ve successfully delivered projects across Southeast Asia, the Middle East, and Africa — 
+      turning empty spaces into creative destinations that inspire joy and exploration.
+    </p>
+  </section>
 
-<section class="section">
-  <h2>Our Services</h2>
-  <div class="cards">
-    <div class="card">
-      <img src="https://your-product-image1.jpg" alt="Indoor Playground">
-      <h3>Indoor Playground Design</h3>
-      <p>We help you plan and customize every space to fit your business goals.</p>
+  <section class="featured">
+    <h2>Featured Products</h2>
+    <div class="product-cards">
+
+      <div class="card">
+        <h3>Turnkey Indoor Playground</h3>
+        <p>All-in-one solution from concept to installation. Perfect for commercial venues.</p>
+        <a href="turnkey.html">Explore</a>
+      </div>
+
+      <div class="card">
+        <h3>Custom Slides</h3>
+        <p>Exciting and safe slides built to match your theme, budget, and layout.</p>
+        <a href="slides.html">Explore</a>
+      </div>
+
     </div>
-    <div class="card">
-      <img src="https://your-product-image2.jpg" alt="Soft Play">
-      <h3>Soft Play Equipment</h3>
-      <p>Safety, fun and aesthetics all come together in our high-end equipment.</p>
-    </div>
-    <div class="card">
-      <img src="https://your-product-image3.jpg" alt="Turnkey Service">
-      <h3>Turnkey Factory Service</h3>
-      <p>From consulting to delivery, we support your playground launch end-to-end.</p>
-    </div>
-  </div>
-  <div class="cta">
-    <a href="contact.html">Start Your Project</a>
-  </div>
-</section>
+  </section>
 
 </body>
 </html>
