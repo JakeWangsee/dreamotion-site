@@ -2,165 +2,172 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Dreamotion - Indoor Playground Factory</title>
   <style>
-    body {
-      margin: 0;
-      font-family: 'Arial', sans-serif;
-      background-color: #f7f7f7;
-      color: #333;
-    }
-
-    header {
-      background-color: #fff;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px 40px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-    }
-
-    nav a {
-      margin-left: 30px;
-      text-decoration: none;
-      color: #333;
-      font-weight: bold;
-    }
+    body { margin: 0; font-family: Arial, sans-serif; color: #333; }
+    header { background: #fff; display: flex; justify-content: space-between; align-items: center; padding: 20px 40px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+    nav ul { list-style: none; margin: 0; padding: 0; display: flex; }
+    nav ul li { position: relative; margin-left: 30px; }
+    nav ul li a { text-decoration: none; color: #333; font-weight: bold; }
+    nav ul li ul { display: none; position: absolute; top: 100%; left: 0; background: #f7f7f7; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+    nav ul li:hover ul { display: block; }
+    nav ul li ul li { padding: 10px 20px; white-space: nowrap; }
 
     .hero {
-      padding: 60px 20px;
-      background: linear-gradient(to right, #e0f7fa, #ffffff);
+      background: #e6f7ff;
+      padding: 80px 20px;
       text-align: center;
     }
-
     .hero h1 {
-      font-size: 2.4em;
+      font-size: 36px;
       margin-bottom: 20px;
     }
-
     .hero p {
-      font-size: 1.1em;
+      font-size: 18px;
       max-width: 800px;
       margin: auto;
-      line-height: 1.6;
+      color: #555;
     }
 
-    .featured {
+    .product-highlight {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 40px;
       padding: 60px 20px;
-      background-color: #fff;
+      background: #fafafa;
     }
-
-    .featured h2 {
-      text-align: center;
-      margin-bottom: 40px;
-    }
-
-    .product-cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 30px;
-      max-width: 1000px;
-      margin: auto;
-    }
-
     .card {
-      background: #fdfdfd;
-      border-radius: 12px;
-      padding: 30px 20px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      background: #fff;
+      width: 300px;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
       text-align: center;
     }
-
     .card h3 {
       margin-bottom: 10px;
-      color: #0088cc;
+      font-size: 20px;
+      color: #0077cc;
     }
-
     .card p {
-      font-size: 0.95em;
+      font-size: 14px;
       color: #666;
     }
-
     .card a {
       display: inline-block;
       margin-top: 15px;
-      padding: 8px 16px;
-      background-color: #0088cc;
-      color: white;
-      text-decoration: none;
+      padding: 10px 20px;
+      background: #0077cc;
+      color: #fff;
       border-radius: 6px;
-      font-size: 0.9em;
+      text-decoration: none;
+      font-weight: bold;
     }
 
-    .card a:hover {
-      background-color: #006699;
+    .section {
+      padding: 60px 40px;
+      max-width: 960px;
+      margin: auto;
+      text-align: center;
+    }
+    .section h2 {
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+    .section p {
+      color: #666;
+      font-size: 16px;
+    }
+
+    footer {
+      background: #222;
+      color: #fff;
+      padding: 40px 20px;
+      text-align: center;
+      margin-top: 60px;
+    }
+    footer a {
+      color: #ccc;
+      margin: 0 10px;
+      text-decoration: none;
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <h2>Dreamotion</h2>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="products.html">Products</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </header>
+<header>
+  <div style="font-size: 24px; font-weight: bold;">Dreamotion</div>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li>
+        <a href="products.html">Products</a>
+        <ul>
+          <li><a href="turnkey.html">Turnkey Indoor Playground</a></li>
+          <li><a href="slides.html">Custom Slides</a></li>
+          <li><a href="ballpools.html">Ball Pools</a></li>
+          <li><a href="trampoline.html">Trampoline Areas</a></li>
+          <li><a href="airball.html">Interactive Airball</a></li>
+          <li><a href="sandpits.html">Sand Pits</a></li>
+          <li><a href="carousel.html">Carousel & Spinners</a></li>
+          <li><a href="reception.html">Reception Area</a></li>
+          <li><a href="adventure.html">Adventure Courses</a></li>
+          <li><a href="custom-request.html">Custom Requests</a></li>
+        </ul>
+      </li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
 
-  <section class="hero">
-    <h1>We Build Imagination</h1>
-    <p>
-      Dreamotion is a leading indoor playground manufacturer based in Guangzhou, China. 
-      With over 8 years of experience, we specialize in designing and building custom play solutions 
-      for shopping malls, preschools, family entertainment centers, and hotels worldwide. 
-      We’ve successfully delivered projects across Southeast Asia, the Middle East, and Africa — 
-      turning empty spaces into creative destinations that inspire joy and exploration.
-    </p>
-  </section>
+<section class="hero">
+  <h1>We Build Imagination</h1>
+  <p>
+    Dreamotion is a leading indoor playground factory based in Guangzhou, China. With 8+ years of experience, we provide turnkey design, production, and consulting for play centers, malls, and hotels across Southeast Asia, Africa, and the Middle East.
+  </p>
+</section>
 
-  <section class="featured">
-    <h2>Featured Products</h2>
-    <div class="product-cards">
+<section class="product-highlight">
+  <div class="card">
+    <h3>Turnkey Indoor Playground</h3>
+    <p>All-in-one design and production for commercial venues.</p>
+    <a href="turnkey.html">Explore</a>
+  </div>
+  <div class="card">
+    <h3>Custom Slides</h3>
+    <p>Spiral, wave, and straight slides built to match your space.</p>
+    <a href="slides.html">Explore</a>
+  </div>
+</section>
 
-      <div class="card">
-        <h3>Turnkey Indoor Playground</h3>
-        <p>All-in-one solution from concept to installation. Perfect for commercial venues.</p>
-        <a href="turnkey.html">Explore</a>
-      </div>
+<section class="section">
+  <h2>Why Choose Dreamotion?</h2>
+  <p>
+    We offer complete in-house manufacturing (steel frame, leather, testing), fast delivery, and expert consultation for layout, safety, and ROI. Trusted by partners in Vietnam, Singapore, Saudi Arabia, and more.
+  </p>
+</section>
 
-      <div class="card">
-        <h3>Custom Slides</h3>
-        <p>Exciting and safe slides built to match your theme, budget, and layout.</p>
-        <a href="slides.html">Explore</a>
-      </div>
+<section class="section">
+  <a href="products.html" style="background:#0077cc; color:#fff; padding:14px 30px; border-radius:6px; text-decoration:none; font-weight:bold;">View All Product Categories</a>
+</section>
 
-    </div>
-  </section>
-  <footer style="background-color: #222; color: #fff; padding: 40px 20px; text-align: center; margin-top: 60px;">
-    <div style="max-width: 1000px; margin: auto;">
-      <p style="font-size: 1em; margin-bottom: 10px;"><strong>Dreamotion Playground Factory</strong></p>
-      <p style="font-size: 0.9em; margin: 5px 0;">WhatsApp: +86-123-4567-8901</p>
-      <p style="font-size: 0.9em; margin: 5px 0;">Email: contact@dreamotionplay.com</p>
-      
-      <div style="margin: 20px 0;">
-        <a href="index.html" style="color:#ccc; margin: 0 10px;">Home</a>
-        <a href="products.html" style="color:#ccc; margin: 0 10px;">Products</a>
-        <a href="about.html" style="color:#ccc; margin: 0 10px;">About</a>
-        <a href="contact.html" style="color:#ccc; margin: 0 10px;">Contact</a>
-      </div>
-
-      <div style="margin: 15px 0;">
-        <span style="color:#888; font-size: 0.85em;">Language:</span>
-        <strong style="margin-left: 10px; color: #fff;">English</strong> | 
-        <a href="#" style="color: #ccc; text-decoration: none; margin-left: 10px;">中文（即将上线）</a>
-      </div>
-
-      <p style="margin-top: 20px; font-size: 0.8em; color: #777;">© 2025 Dreamotion Playground Factory. All rights reserved.</p>
-    </div>
-  </footer>
+<footer>
+  <p><strong>Dreamotion Playground Factory</strong></p>
+  <p>WhatsApp: +86-123-4567-8901 | Email: contact@dreamotionplay.com</p>
+  <div>
+    <a href="index.html">Home</a>
+    <a href="products.html">Products</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </div>
+  <div style="margin-top: 15px; font-size: 0.85em; color: #888;">
+    Language: <strong style="color:#fff">English</strong> | <a href="#">中文（即将上线）</a>
+  </div>
+  <p style="margin-top: 20px; font-size: 0.8em; color: #777;">© 2025 Dreamotion Playground Factory. All rights reserved.</p>
+</footer>
 
 </body>
 </html>
