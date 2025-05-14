@@ -6,14 +6,7 @@
   <title>Ball Pools - Dreamotion</title>
   <style>
     body { margin: 0; font-family: Arial, sans-serif; color: #333; }
-    header, footer {
-      background: #fff;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px 40px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-    }
+    header { background: #fff; display: flex; justify-content: space-between; align-items: center; padding: 20px 40px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
     nav ul { list-style: none; margin: 0; padding: 0; display: flex; }
     nav ul li { position: relative; margin-left: 30px; }
     nav ul li a { text-decoration: none; color: #333; font-weight: bold; }
@@ -21,40 +14,26 @@
     nav ul li:hover ul { display: block; }
     nav ul li ul li { padding: 10px 20px; white-space: nowrap; }
 
-    .breadcrumb {
-      background: #f2f2f2;
-      padding: 15px 40px;
-      font-size: 14px;
+    .hero {
+      background: linear-gradient(to right, #e6f4f8, #ffffff);
+      padding: 80px 20px;
+      text-align: center;
     }
-    .breadcrumb a { color: #0077cc; text-decoration: none; }
+    .hero h1 { font-size: 36px; color: #0077cc; }
+    .hero p { font-size: 18px; max-width: 800px; margin: 20px auto; color: #555; }
 
-    .section {
-      padding: 60px 40px;
-      max-width: 1000px;
-      margin: auto;
-    }
-    .section h1 {
-      text-align: center;
-      font-size: 32px;
-      margin-bottom: 20px;
-    }
-    .section p {
-      text-align: center;
-      color: #666;
-      font-size: 16px;
-      margin-bottom: 40px;
-    }
-    .product-gallery {
+    .gallery {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 20px;
+      gap: 30px;
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 20px;
     }
-    .product-gallery img {
+    .gallery img {
       width: 100%;
-      height: 220px;
-      object-fit: cover;
       border-radius: 10px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
 
     footer {
@@ -68,6 +47,7 @@
   </style>
 </head>
 <body>
+
 <header>
   <div style="font-size: 24px; font-weight: bold;">Dreamotion</div>
   <nav>
@@ -94,21 +74,18 @@
   </nav>
 </header>
 
-<div class="breadcrumb">
-  <a href="index.html">Home</a> / <a href="products.html">Products</a> / Ball Pools
-</div>
-
-<section class="section">
+<section class="hero">
   <h1>Ball Pools</h1>
   <p>
-    Colorful, soft-padded ball pools designed for safe parent-child interaction and toddler fun. Available in various sizes, shapes, and themes to fit your play zone.
+    Colorful, padded ball pool zones designed for safe play and energetic fun—perfect for younger age groups and parent-child interaction.
   </p>
-  <div class="product-gallery">
-    <img src="assets/ballpools-01.jpg" alt="Ball Pool 1">
-    <img src="assets/ballpools-02.jpg" alt="Ball Pool 2">
-    <img src="assets/ballpools-03.jpg" alt="Ball Pool 3">
-  </div>
 </section>
+
+<div class="gallery">
+  <img src="assets/ballpool-01.jpg" alt="Ball Pool 1">
+  <img src="assets/ballpool-02.jpg" alt="Ball Pool 2">
+  <img src="assets/ballpool-03.jpg" alt="Ball Pool 3">
+</div>
 
 <footer>
   <div>
