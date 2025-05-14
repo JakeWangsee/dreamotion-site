@@ -6,105 +6,103 @@
   <title>Custom Slides - Dreamotion</title>
   <style>
     body { margin: 0; font-family: Arial, sans-serif; color: #333; }
-    header { background: #fff; display: flex; justify-content: space-between; align-items: center; padding: 20px 40px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+    .top-bar { background: #e4f2d8; color: #4a8f00; font-size: 14px; text-align: center; padding: 8px; }
+    header { background: #fff; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+    .header-container { display: flex; justify-content: center; align-items: center; max-width: 1200px; margin: 0 auto; padding: 20px 40px; }
+    .logo { font-size: 24px; font-weight: bold; margin-right: 40px; }
     nav ul { list-style: none; margin: 0; padding: 0; display: flex; }
     nav ul li { position: relative; margin-left: 30px; }
     nav ul li a { text-decoration: none; color: #333; font-weight: bold; }
-    nav ul li ul { display: none; position: absolute; top: 100%; left: 0; background: #f7f7f7; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+    nav ul li ul { display: none; position: absolute; top: 100%; left: 0; background: #f7f7f7; box-shadow: 0 2px 8px rgba(0,0,0,0.1); z-index: 10; }
     nav ul li:hover ul { display: block; }
     nav ul li ul li { padding: 10px 20px; white-space: nowrap; }
-
-    .hero {
-      background: linear-gradient(to right, #e6f4f8, #ffffff);
-      padding: 80px 20px;
-      text-align: center;
-    }
-    .hero h1 { font-size: 36px; color: #0077cc; }
-    .hero p { font-size: 18px; max-width: 800px; margin: 20px auto; color: #555; }
-
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 30px;
-      max-width: 1000px;
-      margin: 40px auto;
-      padding: 0 20px;
-    }
-    .gallery img {
-      width: 100%;
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    }
-
-    footer {
-      background: #222;
-      color: #fff;
-      padding: 40px 20px;
-      text-align: center;
-      margin-top: 60px;
-    }
-    footer a { color: #ccc; margin: 0 10px; text-decoration: none; }
+    .hero { height: 400px; background: url("assets/sample-hero.jpg") center center/cover no-repeat; display: flex; justify-content: center; align-items: center; color: white; text-align: center; }
+    .hero h1 { font-size: 42px; background: rgba(0, 0, 0, 0.4); padding: 20px 40px; border-radius: 10px; }
+    .intro { display: flex; align-items: center; justify-content: center; gap: 40px; padding: 60px 40px; }
+    .intro img { max-width: 500px; border-radius: 10px; }
+    .intro .text { max-width: 600px; }
+    .intro h2 { color: #6a9e3f; }
+    .intro .buttons button { margin-right: 20px; padding: 10px 20px; font-weight: bold; cursor: pointer; }
+    .btn-green { background: #6a9e3f; color: white; border: none; }
+    .btn-outline { background: white; border: 2px solid #6a9e3f; color: #6a9e3f; }
+    .toc { background: #8bc34a; padding: 60px 20px; color: white; text-align: center; }
+    .toc h2 { font-size: 28px; margin-bottom: 10px; }
+    .toc p { max-width: 800px; margin: 0 auto 40px; font-size: 16px; }
+    .toc-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; max-width: 1000px; margin: 0 auto; }
+    .toc-grid a { background: white; color: #333; text-decoration: none; display: block; border-radius: 8px; overflow: hidden; }
+    .toc-grid img { width: 100%; height: 150px; object-fit: cover; }
+    .toc-grid div { padding: 15px; font-weight: bold; }
+    .content-section { padding: 60px 20px; max-width: 900px; margin: auto; }
+    .content-section h3 { border-bottom: 2px solid #ccc; padding-bottom: 10px; margin-bottom: 20px; }
+    .floating-buttons { position: fixed; right: 20px; bottom: 40px; display: flex; flex-direction: column; gap: 10px; z-index: 999; }
+    .floating-buttons a { background: #6a9e3f; width: 45px; height: 45px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 20px; text-decoration: none; }
+    .popup-form { display: none; position: fixed; top: 20%; left: 50%; transform: translateX(-50%); background: white; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.3); padding: 30px; z-index: 1000; width: 400px; }
+    .popup-form input, .popup-form textarea { width: 100%; margin-bottom: 15px; padding: 10px; }
+    .popup-form button { background: #6a9e3f; color: white; padding: 10px 20px; border: none; font-weight: bold; }
+    .popup-form .close-btn { position: absolute; right: 15px; top: 10px; cursor: pointer; font-weight: bold; }
   </style>
 </head>
 <body>
-
-<header>
-  <div style="font-size: 24px; font-weight: bold;">Dreamotion</div>
-  <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li>
-        <a href="products.html">Products</a>
+  <div class="top-bar">We Sell Only Top Quality Play Equipment | Mobile/WhatsApp: +86 135 2401 5929</div>
+  <header>
+    <div class="header-container">
+      <div class="logo">Dreamotion</div>
+      <nav>
         <ul>
-          <li><a href="turnkey.html">Turnkey Indoor Playground</a></li>
-          <li><a href="slides.html">Custom Slides</a></li>
-          <li><a href="ballpools.html">Ball Pools</a></li>
-          <li><a href="trampoline.html">Trampoline Areas</a></li>
-          <li><a href="airball.html">Interactive Airball</a></li>
-          <li><a href="sandpits.html">Sand Pits</a></li>
-          <li><a href="carousel.html">Carousel & Spinners</a></li>
-          <li><a href="reception.html">Reception Area</a></li>
-          <li><a href="adventure.html">Adventure Courses</a></li>
-          <li><a href="custom-request.html">Custom Requests</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="contact.html">Contact</a></li>
         </ul>
-      </li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
-</header>
-
-<section class="hero">
-  <h1>Custom Slides</h1>
-  <p>
-    Exciting and safe slides built to match your theme, budget, and layout—available in spiral, wave, straight, and combo designs.
-  </p>
-</section>
-
-<div class="gallery">
-  <img src="assets/slides-01.jpg" alt="Custom Slide 1">
-  <img src="assets/slides-02.jpg" alt="Custom Slide 2">
-  <img src="assets/slides-03.jpg" alt="Custom Slide 3">
-</div>
-
-<footer>
-  <div>
-    <p><strong>Dreamotion Playground Factory</strong></p>
-    <p>WhatsApp: +86-123-4567-8901</p>
-    <p>Email: contact@dreamotionplay.com</p>
-    <div>
-      <a href="index.html">Home</a>
-      <a href="products.html">Products</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
+      </nav>
     </div>
-    <div style="margin-top: 15px; font-size: 0.85em; color: #888;">
-      Language: <strong style="color:#fff">English</strong> | <a href="#">中文（即将上线）</a>
+  </header>
+  <section class="hero"><h1>Custom Slides</h1></section>
+  <section class="intro">
+    <img src="assets/sample-project.jpg" alt="Slide Design" />
+    <div class="text">
+      <h2>Custom <span style="color:#6a9e3f">Slides</span></h2>
+      <p>From spiral slides to wave slides, we offer custom-made indoor playground slides designed for safety, fun, and vibrant aesthetics. Let's design your next attraction!</p>
+      <div class="buttons">
+        <button class="btn-green" onclick="document.querySelector('.popup-form').style.display='block'">GET A QUOTE</button>
+        <button class="btn-outline" onclick="document.getElementById('directory').scrollIntoView({ behavior: 'smooth' })">LEARN MORE</button>
+      </div>
     </div>
-    <p style="margin-top: 20px; font-size: 0.8em; color: #777;">© 2025 Dreamotion Playground Factory. All rights reserved.</p>
+  </section>
+  <section class="toc" id="directory">
+    <h2>Table of Contents for This Page</h2>
+    <p>Below are sections that cover our range of slide solutions and design considerations.</p>
+    <div class="toc-grid">
+      <a href="#types"><img src="assets/thumb1.jpg"><div>Slide Types</div></a>
+      <a href="#materials"><img src="assets/thumb2.jpg"><div>Materials</div></a>
+      <a href="#safety"><img src="assets/thumb3.jpg"><div>Safety Features</div></a>
+      <a href="#cases"><img src="assets/thumb4.jpg"><div>Case Studies</div></a>
+      <a href="#custom"><img src="assets/thumb5.jpg"><div>Customization</div></a>
+      <a href="#tips"><img src="assets/thumb6.jpg"><div>Tips & Pitfalls</div></a>
+      <a href="#faq"><img src="assets/thumb7.jpg"><div>FAQs</div></a>
+    </div>
+  </section>
+  <section id="types" class="content-section"><h3>Slide Types</h3><p>...</p></section>
+  <section id="materials" class="content-section"><h3>Materials</h3><p>...</p></section>
+  <section id="safety" class="content-section"><h3>Safety Features</h3><p>...</p></section>
+  <section id="cases" class="content-section"><h3>Case Studies</h3><p>...</p></section>
+  <section id="custom" class="content-section"><h3>Customization</h3><p>...</p></section>
+  <section id="tips" class="content-section"><h3>Tips & Pitfalls</h3><p>...</p></section>
+  <section id="faq" class="content-section"><h3>FAQs</h3><p>...</p></section>
+  <div class="floating-buttons">
+    <a href="https://wa.me/8613524015929" title="WhatsApp">💬</a>
+    <a href="mailto:contact@dreamotionplay.com" title="Email">📧</a>
+    <a href="#" onclick="document.querySelector('.popup-form').style.display='block'" title="Contact">📝</a>
   </div>
-</footer>
-
+  <div class="popup-form">
+    <span class="close-btn" onclick="this.parentElement.style.display='none'">×</span>
+    <h3>Leave Message Here!</h3>
+    <textarea placeholder="* Inquiry Content"></textarea>
+    <input type="text" placeholder="* Name" />
+    <input type="text" placeholder="* Telephone" />
+    <input type="email" placeholder="* Email" />
+    <input type="text" placeholder="Budget" />
+    <button>Send Message</button>
+  </div>
 </body>
 </html>
-
