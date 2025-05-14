@@ -3,43 +3,36 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Our Products - Dreamotion</title>
+  <title>Products - Dreamotion</title>
   <style>
     body { margin: 0; font-family: Arial, sans-serif; color: #333; }
-    header { background: #fff; display: flex; justify-content: space-between; align-items: center; padding: 20px 40px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+    header { background: #fff; box-shadow: 0 2px 5px rgba(0,0,0,0.05); padding: 20px 40px; }
     nav ul { list-style: none; margin: 0; padding: 0; display: flex; }
-    nav ul li { position: relative; margin-left: 30px; }
+    nav ul li { margin-left: 30px; position: relative; }
     nav ul li a { text-decoration: none; color: #333; font-weight: bold; }
     nav ul li ul { display: none; position: absolute; top: 100%; left: 0; background: #f7f7f7; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
     nav ul li:hover ul { display: block; }
     nav ul li ul li { padding: 10px 20px; white-space: nowrap; }
 
-    .section {
-      padding: 60px 40px;
-      max-width: 1200px;
-      margin: auto;
-    }
-    h1 { text-align: center; font-size: 32px; margin-bottom: 40px; }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 30px;
-    }
+    .section { padding: 60px 40px; max-width: 1200px; margin: auto; }
+    h1 { text-align: center; color: #e53935; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 30px; margin-top: 40px; }
     .card {
       background: #fff;
-      padding: 30px;
       border-radius: 10px;
+      overflow: hidden;
       box-shadow: 0 4px 12px rgba(0,0,0,0.08);
       text-align: center;
+      transition: transform 0.2s ease;
     }
-    .card h3 { color: #0077cc; margin-bottom: 10px; }
-    .card p { color: #555; font-size: 14px; }
+    .card:hover { transform: translateY(-5px); }
+    .card img { width: 100%; height: 180px; object-fit: cover; }
+    .card h3 { color: #e53935; margin: 16px 0 10px; }
     .card a {
       display: inline-block;
-      margin-top: 15px;
+      margin-bottom: 20px;
       padding: 10px 20px;
-      background: #0077cc;
+      background: #e53935;
       color: #fff;
       border-radius: 6px;
       text-decoration: none;
@@ -88,54 +81,49 @@
   <h1>Our Product Categories</h1>
   <div class="grid">
     <div class="card">
+      <img src="assets/thumb-turnkey.jpg" alt="Turnkey Indoor Playground">
       <h3>Turnkey Indoor Playground</h3>
-      <p>Complete design + production solution for commercial spaces.</p>
-      <a href="turnkey.html">Explore</a>
+      <a href="turnkey.html">View More</a>
     </div>
     <div class="card">
+      <img src="assets/thumb-slide.jpg" alt="Custom Slides">
       <h3>Custom Slides</h3>
-      <p>Spiral, wave, and straight slides tailored to your venue needs.</p>
-      <a href="slides.html">Explore</a>
+      <a href="slides.html">View More</a>
     </div>
     <div class="card">
+      <img src="assets/thumb-ballpool.jpg" alt="Ball Pools">
       <h3>Ball Pools</h3>
-      <p>Safe, colorful zones for energetic toddler and parent play.</p>
-      <a href="ballpools.html">Explore</a>
+      <a href="ballpools.html">View More</a>
     </div>
     <div class="card">
-      <h3>Trampoline Areas</h3>
-      <p>Fun and active bouncing areas with strong safety netting.</p>
-      <a href="trampoline.html">Explore</a>
-    </div>
-    <div class="card">
+      <img src="assets/thumb-airball.jpg" alt="Airball">
       <h3>Interactive Airball</h3>
-      <p>Blower-based play that enhances sensory experience.</p>
-      <a href="airball.html">Explore</a>
+      <a href="airball.html">View More</a>
     </div>
     <div class="card">
+      <img src="assets/thumb-sandpit.jpg" alt="Sand Pits">
       <h3>Sand Pits</h3>
-      <p>Soft play with tools and clean materials for creative fun.</p>
-      <a href="sandpits.html">Explore</a>
+      <a href="sandpits.html">View More</a>
     </div>
     <div class="card">
+      <img src="assets/thumb-carousel.jpg" alt="Carousel">
       <h3>Carousel & Spinners</h3>
-      <p>Motorized or manual options for joyful rotating play.</p>
-      <a href="carousel.html">Explore</a>
+      <a href="carousel.html">View More</a>
     </div>
     <div class="card">
-      <h3>Reception Area</h3>
-      <p>Custom-designed entry areas matching theme aesthetics.</p>
-      <a href="reception.html">Explore</a>
+      <img src="assets/thumb-trampoline.jpg" alt="Trampoline">
+      <h3>Trampoline Areas</h3>
+      <a href="trampoline.html">View More</a>
     </div>
     <div class="card">
+      <img src="assets/thumb-adventure.jpg" alt="Adventure">
       <h3>Adventure Courses</h3>
-      <p>Challenging rope bridges and obstacles for physical activity.</p>
-      <a href="adventure.html">Explore</a>
+      <a href="adventure.html">View More</a>
     </div>
     <div class="card">
-      <h3>Custom Requests</h3>
-      <p>Unique concepts brought to life with our design team.</p>
-      <a href="custom-request.html">Explore</a>
+      <img src="assets/thumb-reception.jpg" alt="Reception">
+      <h3>Reception Area</h3>
+      <a href="reception.html">View More</a>
     </div>
   </div>
 </section>
@@ -143,16 +131,12 @@
 <footer>
   <div>
     <p><strong>Dreamotion Playground Factory</strong></p>
-    <p>WhatsApp: +86-123-4567-8901</p>
-    <p>Email: contact@dreamotionplay.com</p>
+    <p>WhatsApp: +86-123-4567-8901 | Email: contact@dreamotionplay.com</p>
     <div>
       <a href="index.html">Home</a>
       <a href="products.html">Products</a>
       <a href="about.html">About</a>
       <a href="contact.html">Contact</a>
-    </div>
-    <div style="margin-top: 15px; font-size: 0.85em; color: #888;">
-      Language: <strong style="color:#fff">English</strong> | <a href="#">中文（即将上线）</a>
     </div>
     <p style="margin-top: 20px; font-size: 0.8em; color: #777;">© 2025 Dreamotion Playground Factory. All rights reserved.</p>
   </div>
