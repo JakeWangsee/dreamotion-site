@@ -2,65 +2,132 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Reception Desks - Dreamotion</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reception Area - Dreamotion</title>
   <style>
     body { margin: 0; font-family: Arial, sans-serif; color: #333; }
-    header { background: #fff; display: flex; justify-content: space-between; align-items: center; padding: 20px 40px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
-    nav a { margin-left: 30px; text-decoration: none; color: #333; font-weight: bold; }
-    .section { max-width: 1000px; margin: auto; padding: 60px 20px; }
-    h1 { text-align: center; font-size: 32px; margin-bottom: 20px; }
-    p { text-align: center; font-size: 16px; color: #666; margin-bottom: 40px; }
-    .product-gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
-    .product-gallery img { width: 100%; height: 220px; object-fit: cover; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); transition: transform 0.3s ease; }
-    .product-gallery img:hover { transform: scale(1.05); }
+    header, footer {
+      background: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+    nav ul { list-style: none; margin: 0; padding: 0; display: flex; }
+    nav ul li { position: relative; margin-left: 30px; }
+    nav ul li a { text-decoration: none; color: #333; font-weight: bold; }
+    nav ul li ul { display: none; position: absolute; top: 100%; left: 0; background: #f7f7f7; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+    nav ul li:hover ul { display: block; }
+    nav ul li ul li { padding: 10px 20px; white-space: nowrap; }
+
+    .breadcrumb {
+      background: #f2f2f2;
+      padding: 15px 40px;
+      font-size: 14px;
+    }
+    .breadcrumb a { color: #0077cc; text-decoration: none; }
+
+    .section {
+      padding: 60px 40px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .section h1 {
+      text-align: center;
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+    .section p {
+      text-align: center;
+      color: #666;
+      font-size: 16px;
+      margin-bottom: 40px;
+    }
+    .product-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+    }
+    .product-gallery img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    footer {
+      background: #222;
+      color: #fff;
+      padding: 40px 20px;
+      text-align: center;
+      margin-top: 60px;
+    }
+    footer a { color: #ccc; margin: 0 10px; text-decoration: none; }
   </style>
 </head>
 <body>
 <header>
   <div style="font-size: 24px; font-weight: bold;">Dreamotion</div>
   <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="products.html">Products</a>
-    <a href="contact.html">Contact</a>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li>
+        <a href="products.html">Products</a>
+        <ul>
+          <li><a href="turnkey.html">Turnkey Indoor Playground</a></li>
+          <li><a href="slides.html">Custom Slides</a></li>
+          <li><a href="ballpools.html">Ball Pools</a></li>
+          <li><a href="trampoline.html">Trampoline Areas</a></li>
+          <li><a href="airball.html">Interactive Airball</a></li>
+          <li><a href="sandpits.html">Sand Pits</a></li>
+          <li><a href="carousel.html">Carousel & Spinners</a></li>
+          <li><a href="reception.html">Reception Area</a></li>
+          <li><a href="adventure.html">Adventure Courses</a></li>
+          <li><a href="custom-request.html">Custom Requests</a></li>
+        </ul>
+      </li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
   </nav>
 </header>
 
-<section class="section">
-  <h1>Reception Desks</h1>
-  <p>
-    Custom reception counters designed to match your theme and brand. Make a strong first impression from the entrance.
-  </p>
+<div class="breadcrumb">
+  <a href="index.html">Home</a> / <a href="products.html">Products</a> / Reception Area
+</div>
 
+<section class="section">
+  <h1>Reception Area</h1>
+  <p>
+    First impressions matter. Our custom-designed reception desks match your playground’s style and provide organized space for check-ins, shoe storage, ticketing, and parent service.
+  </p>
   <div class="product-gallery">
-    <img src="assets/reception-01.jpg" alt="Reception Desk 1">
-    <img src="assets/reception-02.jpg" alt="Reception Desk 2">
-    <img src="assets/reception-03.jpg" alt="Reception Desk 3">
+    <img src="assets/reception-01.jpg" alt="Reception 1">
+    <img src="assets/reception-02.jpg" alt="Reception 2">
+    <img src="assets/reception-03.jpg" alt="Reception 3">
   </div>
 </section>
-  <footer style="background-color: #222; color: #fff; padding: 40px 20px; text-align: center; margin-top: 60px;">
-    <div style="max-width: 1000px; margin: auto;">
-      <p style="font-size: 1em; margin-bottom: 10px;"><strong>Dreamotion Playground Factory</strong></p>
-      <p style="font-size: 0.9em; margin: 5px 0;">WhatsApp: +86-123-4567-8901</p>
-      <p style="font-size: 0.9em; margin: 5px 0;">Email: contact@dreamotionplay.com</p>
-      
-      <div style="margin: 20px 0;">
-        <a href="index.html" style="color:#ccc; margin: 0 10px;">Home</a>
-        <a href="products.html" style="color:#ccc; margin: 0 10px;">Products</a>
-        <a href="about.html" style="color:#ccc; margin: 0 10px;">About</a>
-        <a href="contact.html" style="color:#ccc; margin: 0 10px;">Contact</a>
-      </div>
 
-      <div style="margin: 15px 0;">
-        <span style="color:#888; font-size: 0.85em;">Language:</span>
-        <strong style="margin-left: 10px; color: #fff;">English</strong> | 
-        <a href="#" style="color: #ccc; text-decoration: none; margin-left: 10px;">中文（即将上线）</a>
-      </div>
-
-      <p style="margin-top: 20px; font-size: 0.8em; color: #777;">© 2025 Dreamotion Playground Factory. All rights reserved.</p>
+<footer>
+  <div>
+    <p><strong>Dreamotion Playground Factory</strong></p>
+    <p>WhatsApp: +86-123-4567-8901</p>
+    <p>Email: contact@dreamotionplay.com</p>
+    <div>
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
     </div>
-  </footer>
+    <div style="margin-top: 15px; font-size: 0.85em; color: #888;">
+      Language: <strong style="color:#fff">English</strong> | <a href="#">中文（即将上线）</a>
+    </div>
+    <p style="margin-top: 20px; font-size: 0.8em; color: #777;">© 2025 Dreamotion Playground Factory. All rights reserved.</p>
+  </div>
+</footer>
 
 </body>
 </html>
+
