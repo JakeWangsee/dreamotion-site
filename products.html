@@ -6,17 +6,73 @@
   <title>Products - Dreamotion</title>
   <style>
     body { margin: 0; font-family: Arial, sans-serif; color: #333; }
-    header { background: #fff; box-shadow: 0 2px 5px rgba(0,0,0,0.05); padding: 20px 40px; }
-    nav ul { list-style: none; margin: 0; padding: 0; display: flex; }
-    nav ul li { margin-left: 30px; position: relative; }
-    nav ul li a { text-decoration: none; color: #333; font-weight: bold; }
-    nav ul li ul { display: none; position: absolute; top: 100%; left: 0; background: #f7f7f7; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
-    nav ul li:hover ul { display: block; }
-    nav ul li ul li { padding: 10px 20px; white-space: nowrap; }
+    
+    header {
+      background: #fff;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+
+    .nav-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 40px;
+      padding: 20px 40px;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: #e53935;
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li {
+      margin: 0 20px;
+      position: relative;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+    }
+
+    nav ul li ul {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #f7f7f7;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      z-index: 100;
+    }
+
+    nav ul li:hover ul {
+      display: block;
+    }
+
+    nav ul li ul li {
+      padding: 10px 20px;
+      white-space: nowrap;
+    }
 
     .section { padding: 60px 40px; max-width: 1200px; margin: auto; }
     h1 { text-align: center; color: #e53935; }
-    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 30px; margin-top: 40px; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
     .card {
       background: #fff;
       border-radius: 10px;
@@ -52,29 +108,31 @@
 <body>
 
 <header>
-  <div style="font-size: 24px; font-weight: bold;">Dreamotion</div>
-  <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li>
-        <a href="products.html">Products</a>
-        <ul>
-          <li><a href="turnkey.html">Turnkey Indoor Playground</a></li>
-          <li><a href="slides.html">Custom Slides</a></li>
-          <li><a href="ballpools.html">Ball Pools</a></li>
-          <li><a href="trampoline.html">Trampoline Areas</a></li>
-          <li><a href="airball.html">Interactive Airball</a></li>
-          <li><a href="sandpits.html">Sand Pits</a></li>
-          <li><a href="carousel.html">Carousel & Spinners</a></li>
-          <li><a href="reception.html">Reception Area</a></li>
-          <li><a href="adventure.html">Adventure Courses</a></li>
-          <li><a href="custom-request.html">Custom Requests</a></li>
-        </ul>
-      </li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
+  <div class="nav-container">
+    <div class="logo">Dreamotion</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li>
+          <a href="products.html">Products</a>
+          <ul>
+            <li><a href="turnkey.html">Turnkey Indoor Playground</a></li>
+            <li><a href="slides.html">Custom Slides</a></li>
+            <li><a href="ballpools.html">Ball Pools</a></li>
+            <li><a href="trampoline.html">Trampoline Areas</a></li>
+            <li><a href="airball.html">Interactive Airball</a></li>
+            <li><a href="sandpits.html">Sand Pits</a></li>
+            <li><a href="carousel.html">Carousel & Spinners</a></li>
+            <li><a href="reception.html">Reception Area</a></li>
+            <li><a href="adventure.html">Adventure Courses</a></li>
+            <li><a href="custom-request.html">Custom Requests</a></li>
+          </ul>
+        </li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
 </header>
 
 <section class="section">
