@@ -127,7 +127,27 @@
     .popup-form .close-btn {
       position: absolute; right: 15px; top: 10px; cursor: pointer; font-weight: bold;
     }
-  </style>
+  
+    nav ul li ul {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: rgba(0, 128, 0, 0.85);
+      backdrop-filter: blur(6px);
+      border-radius: 10px;
+      padding: 10px 0;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      z-index: 999;
+      min-width: 200px;
+    }
+
+    nav ul li:hover ul { display: block; }
+    nav ul li ul li { padding: 10px 20px; white-space: nowrap; }
+    nav ul li ul li a { color: white; display: block; }
+    nav ul li ul li a:hover { background-color: rgba(255,255,255,0.2); }
+
+</style>
 </head>
 <body>
   <div class="top-bar">
@@ -136,14 +156,30 @@
   <header>
     <div class="header-container">
       <div class="logo">Dreamotion</div>
-      <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="products.html">Products</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
+      
+<nav>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li>
+      <a href="products.html">Products</a>
+      <ul>
+        <li><a href="turnkey.html">Turnkey Projects</a></li>
+        <li><a href="slides.html">Slides</a></li>
+        <li><a href="ballpools.html">Ball Pools</a></li>
+        <li><a href="airball.html">Airball Machines</a></li>
+        <li><a href="sandpits.html">Sandpits</a></li>
+        <li><a href="carousel.html">Carousel</a></li>
+        <li><a href="trampoline.html">Trampolines</a></li>
+        <li><a href="adventure.html">Adventure Course</a></li>
+        <li><a href="reception.html">Reception Desk</a></li>
+        <li><a href="custom-request.html">Custom Request</a></li>
+      </ul>
+    </li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
     </div>
   </header>
 
