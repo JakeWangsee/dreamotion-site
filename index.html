@@ -1,69 +1,86 @@
+<!-- ✅ Dreamotion 全新首页优化版本 -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Dreamotion - Indoor Playground Manufacturer</title>
+  <meta name="description" content="Dreamotion is a professional indoor playground manufacturer based in China, providing custom design, production, and global delivery services.">
+  <meta name="keywords" content="Indoor Playground, Soft Play, Trampoline Park, Kids Amusement, Custom Slides, Ball Pool, Dreamotion">
+  <meta name="author" content="Dreamotion Factory">
+
+  <!-- OpenGraph 基础结构 -->
+  <meta property="og:title" content="Dreamotion - Custom Indoor Playground Factory">
+  <meta property="og:description" content="Explore our one-stop solution for kids playgrounds. Design, production and delivery — all under one roof.">
+  <meta property="og:image" content="https://dreamotion-site.com/assets/og-cover.jpg">
+  <meta property="og:url" content="https://dreamotion-site.com">
+  <meta property="og:type" content="website">
+
+  <!-- Favicon 图标 -->
+  <link rel="icon" href="/assets/favicon.ico" type="image/x-icon">
+
+  <!-- Schema.org JSON-LD 结构化数据 -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Dreamotion Playground Factory",
+    "url": "https://dreamotion-site.com",
+    "logo": "https://dreamotion-site.com/assets/logo.png",
+    "sameAs": [
+      "https://www.facebook.com/dreamotion",
+      "https://www.instagram.com/dreamotion",
+      "https://mengdongqiji.en.alibaba.com"
+    ]
+  }
+  </script>
+
   <style>
-    body { margin: 0; font-family: Arial, sans-serif; color: #333; }
-    .top-bar {
-      background: #fbe9e7;
-      color: #d32f2f;
-      font-size: 14px;
-      text-align: center;
-      padding: 8px;
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: #333;
     }
     header {
       background: #fff;
       box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-    }
-    .header-container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      max-width: 1200px;
-      margin: 0 auto;
       padding: 20px 40px;
-    }
-    .logo {
-      font-size: 24px;
-      font-weight: bold;
-      margin-right: 40px;
     }
     nav ul {
       list-style: none;
-      margin: 0;
-      padding: 0;
       display: flex;
+      gap: 30px;
+      padding: 0;
+      margin: 0;
     }
     nav ul li {
       position: relative;
-      margin-left: 30px;
     }
     nav ul li a {
       text-decoration: none;
-      color: #333;
       font-weight: bold;
+      color: #333;
     }
     nav ul li ul {
       display: none;
       position: absolute;
+      background: rgba(0, 128, 0, 0.85);
+      border-radius: 10px;
+      padding: 10px;
       top: 100%;
-      left: 0;
-      background: #f7f7f7;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
     nav ul li:hover ul {
       display: block;
     }
-    nav ul li ul li {
-      padding: 10px 20px;
-      white-space: nowrap;
+    nav ul li ul li a {
+      color: #fff;
+      display: block;
+      padding: 8px 16px;
     }
 
     .hero {
       background: linear-gradient(to right, #e53935, #ffffff);
-      padding: 100px 20px 60px;
+      padding: 80px 20px 60px;
       text-align: center;
     }
     .hero h1 {
@@ -77,305 +94,276 @@
       margin: 0 auto 30px;
       color: #555;
     }
-    .hero a {
-      display: inline-block;
-      background: #e53935;
-      color: #fff;
-      padding: 14px 28px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 16px;
-    }
 
-    .section {
-      padding: 60px 40px;
-      max-width: 1200px;
-      margin: auto;
-    }
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 30px;
-    }
-    .card {
-      background: #fff;
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    /* ✅ 首页服务流程 + 视频模块 */
+    .homepage-showcase, .homepage-blog, .industry-solutions, .testimonials {
+      padding: 60px 20px;
       text-align: center;
     }
-    .card img {
-      width: 100%;
+    .process {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .process .step {
+      background: #fff;
+      padding: 20px 30px;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      font-weight: bold;
+    }
+    .video-carousel {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .video-carousel video {
+      width: 300px;
       height: 180px;
+      border-radius: 12px;
+    }
+
+    /* ✅ Blog 栏目样式 */
+    .blog-cards {
+      display: flex;
+      gap: 30px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .blog-card {
+      width: 280px;
+      background: #fafafa;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      overflow: hidden;
+      text-align: left;
+    }
+    .blog-card img {
+      width: 100%;
+      height: 160px;
       object-fit: cover;
     }
-    .card h3 {
-      color: #e53935;
-      margin: 16px 0 10px;
+    .blog-card h3 {
+      font-size: 18px;
+      padding: 15px 15px 0;
+      margin: 0;
     }
-    .card p {
-      color: #555;
+    .blog-card p {
       font-size: 14px;
-      padding: 0 20px 20px;
+      padding: 0 15px 15px;
     }
-    .card a {
-      display: inline-block;
-      margin-bottom: 20px;
-      padding: 10px 20px;
-      background: #e53935;
-      color: #fff;
-      border-radius: 6px;
+    .read-more {
+      display: block;
+      padding: 10px 15px;
+      background: #008800;
+      color: white;
       text-decoration: none;
       font-weight: bold;
     }
 
-    .cta {
-      text-align: center;
-      margin: 60px 0;
+    /* ✅ 客户评价 */
+    .testimonial-grid {
+      display: flex;
+      gap: 30px;
+      justify-content: center;
+      flex-wrap: wrap;
     }
-    .cta a {
-      background: #e53935;
-      color: #fff;
-      padding: 16px 32px;
-      border-radius: 8px;
-      font-size: 16px;
+    .testimonial-item {
+      width: 280px;
+      background: #f5f5f5;
+      padding: 20px;
+      border-radius: 12px;
+      font-style: italic;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    }
+
+    /* ✅ 行业解决方案 */
+    .solution-grid {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+    .solution-card {
+      background: white;
+      width: 280px;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      text-align: left;
+    }
+    .solution-card img {
+      width: 60px;
+      height: 60px;
+      margin-bottom: 15px;
+    }
+
+    /* ✅ 浮动聊天按钮 */
+    .chat-support {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      z-index: 9999;
+    }
+    .chat-button {
+      background: linear-gradient(135deg, #25D366, #128C7E);
+      color: white;
+      padding: 12px 20px;
+      font-size: 14px;
+      border-radius: 30px;
       text-decoration: none;
       font-weight: bold;
     }
 
     footer {
       background: #222;
-      color: #fff;
+      color: white;
       padding: 40px 20px;
       text-align: center;
-      margin-top: 60px;
     }
     footer a {
       color: #ccc;
+      text-decoration: none;
       margin: 0 10px;
-      text-decoration: none;
     }
-
-    .floating-buttons {
-      position: fixed;
-      right: 20px;
-      bottom: 40px;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      z-index: 999;
-    }
-    .floating-buttons a {
-      background: #e53935;
-      width: 45px;
-      height: 45px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      font-size: 20px;
-      text-decoration: none;
-    }
-
-    .popup-form {
-      display: none;
-      position: fixed;
-      top: 20%;
-      left: 50%;
-      transform: translateX(-50%);
-      background: white;
-      border-radius: 10px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-      padding: 30px;
-      z-index: 1000;
-      width: 400px;
-    }
-    .popup-form input,
-    .popup-form textarea {
-      width: 100%;
-      margin-bottom: 15px;
-      padding: 10px;
-    }
-    .popup-form button {
-      background: #e53935;
-      color: white;
-      padding: 10px 20px;
-      border: none;
-      font-weight: bold;
-      cursor: pointer;
-    }
-    .popup-form .close-btn {
-      position: absolute;
-      right: 15px;
-      top: 10px;
-      cursor: pointer;
-      font-weight: bold;
-      font-size: 18px;
-    }
-  
-    nav ul li ul {
-      display: none;
-      position: absolute;
-      top: 100%;
-      left: 0;
-      background: rgba(0, 128, 0, 0.85);
-      backdrop-filter: blur(6px);
-      border-radius: 10px;
-      padding: 10px 0;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-      z-index: 999;
-      min-width: 200px;
-    }
-
-    nav ul li:hover ul { display: block; }
-    nav ul li ul li { padding: 10px 20px; white-space: nowrap; }
-    nav ul li ul li a { color: white; display: block; }
-    nav ul li ul li a:hover { background-color: rgba(255,255,255,0.2); }
-
-</style>
+  </style>
 </head>
 <body>
 
-<div class="top-bar">We Sell Only Top Quality Play Equipment | Mobile/WhatsApp: +86 135 2401 5929</div>
-
 <header>
-  <div class="header-container">
-    <div class="logo">Dreamotion</div>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li>
-          <a href="products.html">Products</a>
-          <ul>
-            <li><a href="turnkey.html">Turnkey Indoor Playground</a></li>
-            <li><a href="slides.html">Custom Slides</a></li>
-            <li><a href="ballpools.html">Ball Pools</a></li>
-            <li><a href="trampoline.html">Trampoline Areas</a></li>
-            <li><a href="airball.html">Interactive Airball</a></li>
-            <li><a href="sandpits.html">Sand Pits</a></li>
-            <li><a href="carousel.html">Carousel & Spinners</a></li>
-            <li><a href="reception.html">Reception Area</a></li>
-            <li><a href="adventure.html">Adventure Courses</a></li>
-            <li><a href="custom-request.html">Custom Requests</a></li>
-          </ul>
-        </li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </div>
+  <div class="logo">Dreamotion</div>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li>
+        <a href="products.html">Products</a>
+        <ul>
+          <li><a href="turnkey.html">Turnkey</a></li>
+          <li><a href="slides.html">Slides</a></li>
+          <li><a href="ballpools.html">Ball Pools</a></li>
+        </ul>
+      </li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
 </header>
 
 <section class="hero">
   <h1>We Build Imagination</h1>
-  <p>
-    Dreamotion is a leading indoor playground manufacturer based in Guangzhou, China.
-    We specialize in designing and building custom play spaces for commercial venues worldwide.
-  </p>
-  <a href="products.html">Explore Our Solutions</a>
+  <p>Dreamotion is a leading indoor playground manufacturer in China. One-stop service from design to delivery.</p>
 </section>
 
-<section class="section">
-  <h2 style="text-align:center; margin-bottom:40px;">Featured Products</h2>
-  <div class="grid">
-    <div class="card">
-      <img src="assets/thumb-turnkey.jpg" alt="Turnkey">
-      <h3>Turnkey Indoor Playground</h3>
-      <p>All-in-one solution from concept to installation.</p>
-      <a href="turnkey.html">Explore</a>
+<section class="homepage-showcase">
+  <h2>Why Choose Dreamotion?</h2>
+  <div class="process">
+    <div class="step">📐 Free Design Plan</div>
+    <div class="step">🏭 Factory Direct Production</div>
+    <div class="step">🚚 Global Delivery</div>
+    <div class="step">🛠️ On-Site Installation Support</div>
+  </div>
+  <h3>Watch Our Projects in Action</h3>
+  <div class="video-carousel">
+    <video src="assets/video1.mp4" controls poster="assets/thumb1.jpg"></video>
+    <video src="assets/video2.mp4" controls poster="assets/thumb2.jpg"></video>
+  </div>
+</section>
+
+<section class="testimonials">
+  <h2>What Our Clients Say</h2>
+  <div class="testimonial-grid">
+    <div class="testimonial-item">
+      <p>“Dreamotion helped me launch my first indoor park in Vietnam. The design was professional and the after-sales support is amazing!”</p>
+      <strong>— Nguyen H., Vietnam</strong>
     </div>
-    <div class="card">
-      <img src="assets/thumb-slide.jpg" alt="Slides">
-      <h3>Custom Slides</h3>
-      <p>Exciting and safe slides designed for all ages and themes.</p>
-      <a href="slides.html">Explore</a>
+    <div class="testimonial-item">
+      <p>“Their one-stop solution saved us weeks of planning. Highly recommend for any mall-based playground setups.”</p>
+      <strong>— Sarah B., UAE</strong>
     </div>
-    <div class="card">
-      <img src="assets/thumb-ballpool.jpg" alt="Ball Pools">
-      <h3>Ball Pools</h3>
-      <p>Safe, colorful zones for sensory development.</p>
-      <a href="ballpools.html">Explore</a>
-    </div>
-    <div class="card">
-      <img src="assets/thumb-airball.jpg" alt="Airball">
-      <h3>Interactive Airball</h3>
-      <p>Engaging play with airflow-based ball systems.</p>
-      <a href="airball.html">Explore</a>
-    </div>
-    <div class="card">
-      <img src="assets/thumb-sandpit.jpg" alt="Sand Pits">
-      <h3>Sand Pits</h3>
-      <p>Clean and interactive sand play for indoor environments.</p>
-      <a href="sandpits.html">Explore</a>
-    </div>
-    <div class="card">
-      <img src="assets/thumb-carousel.jpg" alt="Carousel">
-      <h3>Carousel & Spinners</h3>
-      <p>Whirling fun with safe and colorful carousel options.</p>
-      <a href="carousel.html">Explore</a>
-    </div>
-    <div class="card">
-      <img src="assets/thumb-trampoline.jpg" alt="Trampoline">
-      <h3>Trampoline Areas</h3>
-      <p>Active jump zones with safety-first designs.</p>
-      <a href="trampoline.html">Explore</a>
-    </div>
-    <div class="card">
-      <img src="assets/thumb-adventure.jpg" alt="Adventure">
-      <h3>Adventure Courses</h3>
-      <p>Rope bridges, obstacle challenges and more.</p>
-      <a href="adventure.html">Explore</a>
-    </div>
-    <div class="card">
-      <img src="assets/thumb-reception.jpg" alt="Reception">
-      <h3>Reception Area</h3>
-      <p>Custom front desks to welcome visitors with style.</p>
-      <a href="reception.html">Explore</a>
+    <div class="testimonial-item">
+      <p>“Reliable, fast, and flexible. We expanded from one to three locations thanks to their turnkey systems.”</p>
+      <strong>— James K., South Africa</strong>
     </div>
   </div>
 </section>
 
-<section class="cta">
-  <a href="custom-request.html">Need Something Custom? Let's Talk</a>
+<section class="industry-solutions">
+  <h2>Industry Solutions</h2>
+  <div class="solution-grid">
+    <div class="solution-card">
+      <img src="assets/icons/mall.png" alt="Mall">
+      <h3>Shopping Malls</h3>
+      <p>High-traffic layouts designed for ROI in busy retail environments.</p>
+    </div>
+    <div class="solution-card">
+      <img src="assets/icons/daycare.png" alt="Daycare">
+      <h3>Daycare & Schools</h3>
+      <p>Safe, interactive spaces ideal for education and development.</p>
+    </div>
+    <div class="solution-card">
+      <img src="assets/icons/hotel.png" alt="Hotels">
+      <h3>Hotels & Resorts</h3>
+      <p>Enhance your property's appeal with captivating play zones.</p>
+    </div>
+  </div>
 </section>
+
+<section class="homepage-blog">
+  <h2>Insights & Knowledge</h2>
+  <div class="blog-cards">
+    <div class="blog-card">
+      <img src="assets/blog1.jpg" alt="Blog 1">
+      <h3>5 Tips to Choose the Best Indoor Playground</h3>
+      <p>Learn how to evaluate safety, engagement and space use in our practical guide.</p>
+      <a href="#" class="read-more">Read More →</a>
+    </div>
+    <div class="blog-card">
+      <img src="assets/blog2.jpg" alt="Blog 2">
+      <h3>From Design to Delivery</h3>
+      <p>Behind the scenes: How we build playgrounds for clients worldwide.</p>
+      <a href="#" class="read-more">Read More →</a>
+    </div>
+  </div>
+</section>
+
+<div class="chat-support">
+  <a href="https://wa.me/8613524015929" target="_blank" class="chat-button">💬 Chat with us on WhatsApp</a>
+</div>
 
 <footer>
-  <div>
-    <p><strong>Dreamotion Playground Factory</strong></p>
-    <p>WhatsApp: +86-123-4567-8901</p>
-    <p>Email: contact@dreamotionplay.com</p>
-    <div>
-      <a href="index.html">Home</a>
-      <a href="products.html">Products</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-    </div>
-    <div style="margin-top: 15px; font-size: 0.85em; color: #888;">
-      Language: <strong style="color:#fff">English</strong> | <a href="#">中文（即将上线）</a>
-    </div>
-    <p style="margin-top: 20px; font-size: 0.8em; color: #777;">© 2025 Dreamotion Playground Factory. All rights reserved.</p>
-  </div>
+  <p>© 2025 Dreamotion Playground Factory</p>
+  <p>Follow us on: 
+    <a href="#">TikTok</a> | 
+    <a href="#">Facebook</a> | 
+    <a href="#">Alibaba</a> | 
+    <a href="#">Instagram</a>
+  </p>
 </footer>
 
-<!-- Floating Buttons + Popup -->
-<div class="floating-buttons">
-  <a href="https://wa.me/8613524015929" title="WhatsApp">💬</a>
-  <a href="mailto:contact@dreamotionplay.com" title="Email">📧</a>
-  <a href="#" onclick="document.querySelector('.popup-form').style.display='block'" title="Contact">📝</a>
-</div>
-
-<div class="popup-form" style="display:none;">
-  <span class="close-btn" onclick="this.parentElement.style.display='none'">×</span>
-  <h3>Leave Message Here!</h3>
-  <textarea placeholder="* Inquiry Content"></textarea>
-  <input type="text" placeholder="* Name" />
-  <input type="text" placeholder="* Telephone" />
-  <input type="email" placeholder="* Email" />
-  <input type="text" placeholder="Budget" />
-  <button>Send Message</button>
-</div>
+<script>
+  // 多语言跳转
+  (function() {
+    const userLang = navigator.language || navigator.userLanguage;
+    const langMap = {
+      'zh': 'index-cn.html',
+      'ja': 'index-jp.html',
+      'ar': 'index-ar.html',
+      'ru': 'index-ru.html'
+    };
+    const basePath = window.location.pathname;
+    if (basePath === '/' || basePath.endsWith('index.html')) {
+      for (const key in langMap) {
+        if (userLang.startsWith(key)) {
+          window.location.href = langMap[key];
+          break;
+        }
+      }
+    }
+  })();
+</script>
 
 </body>
 </html>
