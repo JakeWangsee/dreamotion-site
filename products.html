@@ -1,75 +1,63 @@
+<!-- ✅ Dreamotion 产品总览页优化版 -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Products - Dreamotion</title>
+  <meta name="description" content="Explore all our indoor playground product categories including slides, trampolines, ball pools, and more.">
+  <link rel="icon" href="/assets/favicon.ico" type="image/x-icon" />
   <style>
     body {
       margin: 0;
       font-family: Arial, sans-serif;
       color: #333;
     }
-
     header {
       background: #fff;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-    }
-
-    .header-container {
-      max-width: 1200px;
-      margin: 0 auto;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
       padding: 20px 40px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
     }
-
-    .logo {
-      font-size: 24px;
-      font-weight: bold;
-      color: #e53935;
-      margin-bottom: 10px;
-    }
-
     nav ul {
-      display: flex;
-      justify-content: center;
       list-style: none;
-      margin: 0;
+      display: flex;
+      gap: 30px;
       padding: 0;
-      flex-wrap: wrap;
+      margin: 0;
     }
-
     nav ul li {
-      margin: 0 20px;
       position: relative;
     }
-
     nav ul li a {
       text-decoration: none;
-      color: #333;
       font-weight: bold;
+      color: #333;
     }
-
     nav ul li ul {
       display: none;
       position: absolute;
+      background: rgba(0, 128, 0, 0.85);
+      border-radius: 10px;
+      padding: 10px;
       top: 100%;
-      left: 50%;
-      transform: translateX(-50%);
-      background: #f7f7f7;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-      z-index: 100;
     }
-
     nav ul li:hover ul {
       display: block;
     }
+    nav ul li ul li a {
+      color: #fff;
+      display: block;
+      padding: 8px 16px;
+    }
 
-    nav ul li ul li {
-      padding: 10px 20px;
-      white-space: nowrap;
+    .breadcrumb {
+      background: #f8f8f8;
+      padding: 12px 40px;
+      font-size: 14px;
+    }
+    .breadcrumb a {
+      color: #e53935;
+      text-decoration: none;
     }
 
     .section {
@@ -78,29 +66,18 @@
       margin: auto;
     }
 
-    h1 {
-      text-align: center;
-      color: #e53935;
-    }
-
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       gap: 30px;
-      margin-top: 40px;
     }
 
     .card {
       background: #fff;
       border-radius: 10px;
       overflow: hidden;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
       text-align: center;
-      transition: transform 0.2s ease;
-    }
-
-    .card:hover {
-      transform: translateY(-5px);
     }
 
     .card img {
@@ -112,6 +89,12 @@
     .card h3 {
       color: #e53935;
       margin: 16px 0 10px;
+    }
+
+    .card p {
+      color: #555;
+      font-size: 14px;
+      padding: 0 20px 20px;
     }
 
     .card a {
@@ -127,148 +110,73 @@
 
     footer {
       background: #222;
-      color: #fff;
+      color: white;
       padding: 40px 20px;
       text-align: center;
-      margin-top: 60px;
     }
 
     footer a {
       color: #ccc;
+      text-decoration: none;
       margin: 0 10px;
-      text-decoration: none;
     }
-  
-    nav ul li ul {
-      display: none;
-      position: absolute;
-      top: 100%;
-      left: 50%;
-      transform: translateX(-50%);
-      background: rgba(0, 128, 0, 0.85);
-      backdrop-filter: blur(6px);
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-      border-radius: 10px;
-      padding: 10px 0;
-      min-width: 200px;
-      z-index: 999;
-    }
-
-    nav ul li:hover ul {
-      display: block;
-    }
-
-    nav ul li ul li {
-      padding: 10px 20px;
-      white-space: nowrap;
-    }
-
-    nav ul li ul li a {
-      color: white;
-      text-decoration: none;
-      display: block;
-      font-weight: bold;
-    }
-
-    nav ul li ul li a:hover {
-      background-color: rgba(255, 255, 255, 0.2);
-    }
-
-</style>
+  </style>
 </head>
 <body>
 
 <header>
-  <div class="header-container">
-    <div class="logo">Dreamotion</div>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li>
-          <a href="products.html">Products</a>
-          <ul>
-            <li><a href="turnkey.html">Turnkey Indoor Playground</a></li>
-            <li><a href="slides.html">Custom Slides</a></li>
-            <li><a href="ballpools.html">Ball Pools</a></li>
-            <li><a href="trampoline.html">Trampoline Areas</a></li>
-            <li><a href="airball.html">Interactive Airball</a></li>
-            <li><a href="sandpits.html">Sand Pits</a></li>
-            <li><a href="carousel.html">Carousel & Spinners</a></li>
-            <li><a href="reception.html">Reception Area</a></li>
-            <li><a href="adventure.html">Adventure Courses</a></li>
-            <li><a href="custom-request.html">Custom Requests</a></li>
-          </ul>
-        </li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </div>
+  <div class="logo">Dreamotion</div>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li>
+        <a href="products.html">Products</a>
+        <ul>
+          <li><a href="turnkey.html">Turnkey</a></li>
+          <li><a href="slides.html">Slides</a></li>
+          <li><a href="ballpools.html">Ball Pools</a></li>
+          <li><a href="trampoline.html">Trampoline</a></li>
+          <li><a href="airball.html">Airball</a></li>
+          <li><a href="sandpits.html">Sandpits</a></li>
+          <li><a href="carousel.html">Carousel</a></li>
+          <li><a href="reception.html">Reception</a></li>
+          <li><a href="adventure.html">Adventure</a></li>
+          <li><a href="custom-request.html">Custom</a></li>
+        </ul>
+      </li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
 </header>
 
+<div class="breadcrumb">
+  <a href="index.html">Home</a> &gt; Products
+</div>
+
 <section class="section">
-  <h1>Our Product Categories</h1>
+  <h2 style="text-align:center; margin-bottom:40px;">All Product Categories</h2>
   <div class="grid">
-    <div class="card">
-      <img src="assets/thumb-turnkey.jpg" alt="Turnkey Indoor Playground">
-      <h3>Turnkey Indoor Playground</h3>
-      <a href="turnkey.html">View More</a>
-    </div>
-    <div class="card">
-      <img src="assets/thumb-slide.jpg" alt="Custom Slides">
-      <h3>Custom Slides</h3>
-      <a href="slides.html">View More</a>
-    </div>
-    <div class="card">
-      <img src="assets/thumb-ballpool.jpg" alt="Ball Pools">
-      <h3>Ball Pools</h3>
-      <a href="ballpools.html">View More</a>
-    </div>
-    <div class="card">
-      <img src="assets/thumb-airball.jpg" alt="Airball">
-      <h3>Interactive Airball</h3>
-      <a href="airball.html">View More</a>
-    </div>
-    <div class="card">
-      <img src="assets/thumb-sandpit.jpg" alt="Sand Pits">
-      <h3>Sand Pits</h3>
-      <a href="sandpits.html">View More</a>
-    </div>
-    <div class="card">
-      <img src="assets/thumb-carousel.jpg" alt="Carousel">
-      <h3>Carousel & Spinners</h3>
-      <a href="carousel.html">View More</a>
-    </div>
-    <div class="card">
-      <img src="assets/thumb-trampoline.jpg" alt="Trampoline">
-      <h3>Trampoline Areas</h3>
-      <a href="trampoline.html">View More</a>
-    </div>
-    <div class="card">
-      <img src="assets/thumb-adventure.jpg" alt="Adventure">
-      <h3>Adventure Courses</h3>
-      <a href="adventure.html">View More</a>
-    </div>
-    <div class="card">
-      <img src="assets/thumb-reception.jpg" alt="Reception">
-      <h3>Reception Area</h3>
-      <a href="reception.html">View More</a>
-    </div>
+    <div class="card"><img src="assets/thumb-turnkey.jpg" alt="Turnkey"><h3>Turnkey Playgrounds</h3><p>From design to installation — a full package.</p><a href="turnkey.html">View</a></div>
+    <div class="card"><img src="assets/thumb-slide.jpg" alt="Slides"><h3>Custom Slides</h3><p>Thrilling designs made to fit any space.</p><a href="slides.html">View</a></div>
+    <div class="card"><img src="assets/thumb-ballpool.jpg" alt="Ball Pools"><h3>Ball Pools</h3><p>Colorful, soft play for sensory development.</p><a href="ballpools.html">View</a></div>
+    <div class="card"><img src="assets/thumb-airball.jpg" alt="Airball"><h3>Interactive Airball</h3><p>Engaging air-blast games kids love.</p><a href="airball.html">View</a></div>
+    <div class="card"><img src="assets/thumb-sandpit.jpg" alt="Sand Pits"><h3>Sand Pits</h3><p>Clean, indoor sand play area designs.</p><a href="sandpits.html">View</a></div>
+    <div class="card"><img src="assets/thumb-carousel.jpg" alt="Carousel"><h3>Carousel</h3><p>Whirling fun in a safe & colorful way.</p><a href="carousel.html">View</a></div>
+    <div class="card"><img src="assets/thumb-trampoline.jpg" alt="Trampoline"><h3>Trampoline</h3><p>Active bouncing with premium safety.</p><a href="trampoline.html">View</a></div>
+    <div class="card"><img src="assets/thumb-adventure.jpg" alt="Adventure"><h3>Adventure Courses</h3><p>Obstacle courses and climbing fun.</p><a href="adventure.html">View</a></div>
+    <div class="card"><img src="assets/thumb-reception.jpg" alt="Reception"><h3>Reception Areas</h3><p>Custom front desks for your space.</p><a href="reception.html">View</a></div>
   </div>
 </section>
 
 <footer>
-  <div>
-    <p><strong>Dreamotion Playground Factory</strong></p>
-    <p>WhatsApp: +86-123-4567-8901 | Email: contact@dreamotionplay.com</p>
-    <div>
-      <a href="index.html">Home</a>
-      <a href="products.html">Products</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-    </div>
-    <p style="margin-top: 20px; font-size: 0.8em; color: #777;">© 2025 Dreamotion Playground Factory. All rights reserved.</p>
-  </div>
+  <p>© 2025 Dreamotion Playground Factory</p>
+  <p>
+    <a href="#">TikTok</a> |
+    <a href="#">Facebook</a> |
+    <a href="#">Instagram</a> |
+    <a href="#">Alibaba</a>
+  </p>
 </footer>
 
 </body>
