@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,9 +14,27 @@
     nav ul { list-style: none; margin: 0; padding: 0; display: flex; }
     nav ul li { position: relative; margin-left: 30px; }
     nav ul li a { text-decoration: none; color: #333; font-weight: bold; }
-    nav ul li ul { display: none; position: absolute; top: 100%; left: 0; background: #f7f7f7; box-shadow: 0 2px 8px rgba(0,0,0,0.1); z-index: 10; }
+
+    /* 优化样式 */
+    nav ul li ul {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: rgba(0, 128, 0, 0.85);
+      backdrop-filter: blur(6px);
+      border-radius: 10px;
+      padding: 10px 0;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      z-index: 999;
+      min-width: 200px;
+    }
+
     nav ul li:hover ul { display: block; }
     nav ul li ul li { padding: 10px 20px; white-space: nowrap; }
+    nav ul li ul li a { color: white; display: block; }
+    nav ul li ul li a:hover { background-color: rgba(255,255,255,0.2); }
+
     .hero { height: 400px; background: url("assets/sample-adventure.jpg") center center/cover no-repeat; display: flex; justify-content: center; align-items: center; color: white; text-align: center; }
     .hero h1 { font-size: 42px; background: rgba(0, 0, 0, 0.4); padding: 20px 40px; border-radius: 10px; }
     .intro { display: flex; align-items: center; justify-content: center; gap: 40px; padding: 60px 40px; }
@@ -51,12 +70,28 @@
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
-          <li><a href="products.html">Products</a></li>
+          <li>
+            <a href="products.html">Products</a>
+            <ul>
+              <li><a href="turnkey.html">Turnkey Projects</a></li>
+              <li><a href="slides.html">Slides</a></li>
+              <li><a href="ballpools.html">Ball Pools</a></li>
+              <li><a href="airball.html">Airball Machines</a></li>
+              <li><a href="sandpits.html">Sandpits</a></li>
+              <li><a href="carousel.html">Carousel</a></li>
+              <li><a href="trampoline.html">Trampolines</a></li>
+              <li><a href="adventure.html">Adventure Course</a></li>
+              <li><a href="reception.html">Reception Desk</a></li>
+              <li><a href="custom-request.html">Custom Request</a></li>
+            </ul>
+          </li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
     </div>
   </header>
+
+
   <section class="hero"><h1>Adventure Courses</h1></section>
   <section class="intro">
     <img src="assets/sample-adventure.jpg" alt="Adventure Playground" />
@@ -104,6 +139,9 @@
   </div>
 </body>
 </html>
+
+
+
 
 
 
