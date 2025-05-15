@@ -128,7 +128,46 @@
       color: #999;
       font-size: 16px;
     }
-  </style>
+  
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdown-menu {
+      display: none;
+      position: absolute;
+      top: 35px;
+      left: 0;
+      background: rgba(0, 128, 0, 0.85);
+      backdrop-filter: blur(6px);
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      min-width: 220px;
+      z-index: 999;
+    }
+
+    .dropdown-menu li {
+      list-style: none;
+    }
+
+    .dropdown-menu a {
+      display: block;
+      padding: 10px 20px;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .dropdown-menu a:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+
+    .dropdown:hover .dropdown-menu {
+      display: block;
+    }
+
+</style>
 </head>
 <body>
 
@@ -137,12 +176,28 @@
     <img src="assets/logo.png" alt="Dreamotion Logo">
     <span>Dreamotion</span>
   </div>
-  <nav class="main-nav">
-    <a href="index.html">Home</a>
+  
+<nav class="main-nav">
+  <a href="index.html">Home</a>
+  <div class="dropdown">
     <a href="products.html">Products</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
-  </nav>
+    <ul class="dropdown-menu">
+      <li><a href="turnkey.html">Turnkey Projects</a></li>
+      <li><a href="slides.html">Slides</a></li>
+      <li><a href="ballpools.html">Ball Pools</a></li>
+      <li><a href="airball.html">Airball Machines</a></li>
+      <li><a href="sandpits.html">Sandpits</a></li>
+      <li><a href="carousel.html">Carousel</a></li>
+      <li><a href="trampoline.html">Trampolines</a></li>
+      <li><a href="adventure.html">Adventure Course</a></li>
+      <li><a href="reception.html">Reception Desk</a></li>
+      <li><a href="custom-request.html">Custom Request</a></li>
+    </ul>
+  </div>
+  <a href="about.html">About</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
   <div class="contact-info-header">
     WhatsApp: +86 123 4567 8901
   </div>
@@ -196,3 +251,4 @@
 
 </body>
 </html>
+
